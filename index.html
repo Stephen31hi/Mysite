@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L.I.S.T. LLC</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', serif;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .background {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .content {
+      z-index: 2;
+      position: relative;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .services, .benefits, .process {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .service-item, .benefit-item, .process-step {
+      max-width: 300px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 20px;
+      background-color: #ffffff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 22px;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: #dddddd;
+    }
+
+    /* Optional: make sure the form and content are not too close on small screens */
+    @media (max-width: 768px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 32px; }
+      p { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="background" style="background-image: url('https://images.unsplash.com/photo-1690068867787-333bb850f36e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>L.I.S.T. LLC</h1>
+      <p>Strategic Consulting. Reliable IT Support. Smarter Business Decisions.</p>
+      <p>We empower companies with targeted insights and end-to-end technology services that drive long-term growth and operational clarity.</p>
+      <a href="#contact" class="btn-contact">CONTACT US</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section style="background-color: #1a1a1a;">
+    <div class="content">
+      <h2>Who We Are</h2>
+      <p>L.I.S.T. LLC is a US-based consulting firm that bridges the gap between business goals and technology execution. We specialize in streamlining business operations, designing scalable IT infrastructures, and providing hands-on management consulting for companies in transition or growth. Our consultants combine industry expertise with data-driven approaches to deliver results that matter.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section style="background-color: #2c2c2c;">
+    <div class="content">
+      <h2>What We Do</h2>
+      <div class="services">
+        <div class="service-item">
+          <h3>Management Consulting</h3>
+          <p>We work with leadership teams to optimize business strategy, restructure operations, and unlock organizational efficiency through data-backed planning.</p>
+        </div>
+        <div class="service-item">
+          <h3>Business Advisory</h3>
+          <p>From startups to scale-ups, we provide tailored advice on market positioning, revenue models, and investment readiness to drive sustainable growth.</p>
+        </div>
+        <div class="service-item">
+          <h3>IT Support & Integration</h3>
+          <p>We deliver comprehensive IT support, including infrastructure setup, cloud solutions, and cybersecurity services customized to your workflow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With Us -->
+  <section style="background-color: #3a3a3a;">
+    <div class="content">
+      <h2>Why Clients Choose L.I.S.T.</h2>
+      <div class="benefits">
+        <div class="benefit-item">
+          <h3>Results-Driven Focus</h3>
+          <p>We align every solution with measurable business outcomes, ensuring value from day one.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Cross-Industry Expertise</h3>
+          <p>Our team has worked with finance, healthcare, logistics, and tech — we understand complex environments.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Reliable Support</h3>
+          <p>From initial consultation to full execution, we stay with you every step of the way with 24/7 support options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section style="background-color: #4b4b4b;">
+    <div class="content">
+      <h2>Our Proven Process</h2>
+      <div class="process">
+        <div class="process-step">
+          <h3>1. Discover</h3>
+          <p>We assess your current challenges, goals, and internal capabilities to define a clear path forward.</p>
+        </div>
+        <div class="process-step">
+          <h3>2. Design</h3>
+          <p>We build tailored strategies and infrastructure plans that integrate seamlessly into your business model.</p>
+        </div>
+        <div class="process-step">
+          <h3>3. Deliver</h3>
+          <p>We execute, monitor, and refine solutions to ensure lasting impact and measurable improvements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="background" style="background-image: url('https://plus.unsplash.com/premium_photo-1733342504764-b227bfee6453?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Get In Touch</h2>
+      <p>We'd love to hear from you. Reach out to explore how we can support your business transformation.</p>
+      <p>Let’s start building smarter systems and better outcomes together.</p>
+      <form action="mailto:welcome@list-llc.services" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Your Email Address" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <br/>
+      <p style="margin-top: 40px;">
+        <strong>Address:</strong> 2252 E Lynwood St, Mesa, AZ 85213, US<br/>
+        <strong>Email:</strong> welcome@list-llc.services
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
